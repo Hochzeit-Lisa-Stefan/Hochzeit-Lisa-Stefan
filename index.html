@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hochzeit von Lisa & Stefan</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+--navy:#17324d;--blue:#5f84b1;--light:#f8fbfd;--gold:#d8c3a5;--text:#2f3e46;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Manrope,sans-serif;color:var(--text);line-height:1.8;background:white}
+h1,h2,h3{font-family:"Cormorant Garamond",serif}
+nav{position:fixed;top:0;width:100%;background:rgba(23,50,77,.85);backdrop-filter:blur(12px);z-index:999;padding:14px;text-align:center}
+nav a{color:#fff;text-decoration:none;margin:0 12px}
+.hero{height:100vh;background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.55)),url('hochzeitsfoto.jpg') center/cover;display:flex;align-items:center;justify-content:center;color:white;text-align:center}
+.hero h1{font-size:5.8rem;margin:0}
+.hero .box{border:1px solid rgba(255,255,255,.3);padding:20px 30px;border-radius:20px;background:rgba(255,255,255,.08)}
+section{padding:100px 24px}
+.container{max-width:1150px;margin:auto}
+.alt{background:var(--light)}
+h2{text-align:center;font-size:3rem;color:var(--navy)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.card{background:white;padding:28px;border-radius:24px;box-shadow:0 10px 35px rgba(0,0,0,.07)}
+.timeline .item{padding:16px;border-left:3px solid var(--blue);margin:14px 0;background:white}
+.btn{display:inline-block;background:var(--navy);color:white;text-decoration:none;padding:12px 18px;border-radius:12px}
+iframe{width:100%;height:280px;border:0;border-radius:16px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.gallery img{width:100%;border-radius:20px;object-fit:cover;height:320px}
+form input,form select{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border-radius:10px}
+footer{background:var(--navy);color:white;text-align:center;padding:60px 20px}
+.qr{padding:20px;border:2px dashed var(--gold);border-radius:16px;text-align:center}
+</style>
+</head>
+<body>
+
+<nav>
+<a href="#willkommen">Willkommen</a>
+<a href="#ablauf">Ablauf</a>
+<a href="#anfahrt">Anfahrt</a>
+<a href="#uebernachtung">Übernachtung</a>
+<a href="#galerie">Galerie</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
+
+<header class="hero">
+<div>
+<p>17. Juli 2026</p>
+<h1>Hochzeit von<br>Lisa & Stefan</h1>
+<div id="countdown" class="box"></div>
+</div>
+</header>
+
+<section id="willkommen">
+<div class="container">
+<h2>Willkommen</h2>
+<div class="card">
+<p>Liebe Familie, liebe Freunde,</p>
+<p>wir freuen uns sehr, unseren besonderen Tag gemeinsam mit euch zu verbringen.</p>
+<p>Nach unserer standesamtlichen Trauung in Fischbachau feiern wir mit euch dort, wo wir uns am wohlsten fühlen: in den Bergen.</p>
+<p>Gemeinsam verbringen wir einen entspannten Tag auf dem Sillberghaus mit gutem Essen, schönen Gesprächen, einem Sprung ins Naturschwimmbad und einer hoffentlich langen, warmen Sommernacht.</p>
+</div>
+</div>
+</section>
+
+<section class="alt" id="ablauf">
+<div class="container">
+<h2>Tagesablauf</h2>
+<div class="timeline">
+<div class="item">💍 13:00 Uhr – Trauung</div>
+<div class="item">🥂 13:30 Uhr – Sektempfang</div>
+<div class="item">🚗 14:30 Uhr – Fahrt zum Parkplatz Sillberghaus</div>
+<div class="item">🥾 Aufstieg (2 km · 200 hm · 30–40 Min)</div>
+<div class="item">🍰 15:00 Uhr – Brotzeit & Kuchen</div>
+<div class="item">🍽️ 19:00 Uhr – Abendessen</div>
+<div class="item">🎉 Ab 20:30 Uhr – Party mit DJ</div>
+</div>
+</div>
+</section>
+
+<section id="anfahrt">
+<div class="container">
+<h2>Anfahrt & Karten</h2>
+<div class="grid">
+<div class="card">
+<h3>Standesamt Fischbachau</h3>
+<a class="btn" href="https://maps.app.goo.gl/reiWJmnAuFRUBCJK6">Route öffnen</a>
+<iframe src="https://maps.google.com/maps?q=Fischbachau&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+<div class="card">
+<h3>Parkplatz Sillberghaus</h3>
+<a class="btn" href="https://maps.app.goo.gl/1ucgxXYxgLac9Qjw7">Route öffnen</a>
+<iframe src="https://maps.google.com/maps?q=Bayrischzell&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+</div>
+</div>
+</section>
+
+<section class="alt" id="uebernachtung">
+<div class="container">
+<h2>Übernachtung</h2>
+<div class="grid">
+<div class="card"><h3>🛏️ Hütte</h3><p>80 € inkl. Frühstück<br>Kinder unter 12 Jahren: 30 €<br>ca. 30 Plätze</p></div>
+<div class="card"><h3>⛺ Zelt</h3><p>Wiese neben der Hütte</p></div>
+<div class="card"><h3>🚐 Camper</h3><p>Parkplatz Sillberghaus</p></div>
+</div>
+<p>Bitte stimmt eure Übernachtungspräferenz frühzeitig mit uns ab. Stirnlampe für den Abstieg nicht vergessen.</p>
+</div>
+</section>
+
+<section id="galerie">
+<div class="container">
+<h2>Unsere Galerie</h2>
+<div class="gallery">
+<img src="hochzeitsfoto.jpg" alt="Lisa und Stefan">
+<img src="hochzeitsfoto.jpg" alt="Lisa und Stefan">
+<img src="hochzeitsfoto.jpg" alt="Lisa und Stefan">
+</div>
+</div>
+</section>
+
+<section class="alt">
+<div class="container">
+<h2>Rückmeldung (optional)</h2>
+<div class="card">
+<form>
+<input placeholder="Name">
+<select><option>Übernachtung auf der Hütte</option><option>Zelten</option><option>Camper/Auto</option></select>
+<select><option>Schweinebraten</option><option>Knödeltris</option></select>
+</form>
+<p><em>Dieses Formular dient als Designvorlage und kann später mit echter Übermittlung ergänzt werden.</em></p>
+</div>
+</div>
+</section>
+
+<section id="kontakt">
+<div class="container">
+<h2>Kontakt</h2>
+<div class="grid">
+<div class="card"><h3>Stefan</h3><p>0179 7750976<br>stefanpfrang@gmx.de</p></div>
+<div class="card"><h3>Lisa</h3><p>0151 646410125<br>lisa.vitzthum@gmx.net</p></div>
+<div class="card qr"><h3>QR-Code für Einladung</h3><p>Hier kann später ein QR-Code zur Website eingefügt werden.</p></div>
+</div>
+</div>
+</section>
+
+<footer>
+<h3>Wir freuen uns auf euch 💙</h3>
+<p>Lisa & Stefan · 17.07.2026</p>
+</footer>
+
+<script>
+const target=new Date("2026-07-17T13:00:00");
+function upd(){
+const d=target-new Date();
+document.getElementById('countdown').innerHTML='Noch <b>'+Math.floor(d/86400000)+'</b> Tage bis zur Hochzeit';
+}
+upd(); setInterval(upd,60000);
+</script>
+
+</body>
+</html>
