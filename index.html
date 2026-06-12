@@ -12,10 +12,14 @@
 *{box-sizing:border-box;scroll-behavior:smooth}
 body{margin:0;font-family:Manrope,sans-serif;color:var(--text);line-height:1.8;background:white}
 h1,h2,h3{font-family:"Cormorant Garamond",serif}
-nav{position:fixed;top:0;width:100%;background:rgba(23,50,77,.95);backdrop-filter:blur(12px);z-index:999;padding:12px 16px;text-align:center;display:flex;justify-content:space-between;align-items:center}
-nav a{color:#fff;text-decoration:none;margin:0 12px;font-size:0.95rem}
-.menu-toggle{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer}
-.nav-menu{display:flex;gap:0}
+nav{position:fixed;top:0;width:100%;background:rgba(23,50,77,.95);backdrop-filter:blur(12px);z-index:999;padding:12px 16px;text-align:center;display:flex;justify-content:center;align-items:center;gap:20px;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none;font-size:clamp(0.85rem, 2vw, 0.95rem);white-space:nowrap}
+.nav-menu{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+@media (max-width:600px){
+  nav{padding:10px;gap:10px}
+  .nav-menu{gap:12px}
+  nav a{font-size:0.8rem}
+}
 .hero{height:80vh;min-height:400px;background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.55)),url('/Hochzeit-Lisa-Stefan/IMG_3783.jpeg') center/cover;display:flex;align-items:center;justify-content:center;color:white;text-align:center;margin-top:50px}
 .hero div{padding:20px}
 .hero p{margin:0 0 10px 0;font-size:1.2rem}
@@ -51,20 +55,12 @@ footer{background:var(--navy);color:white;text-align:center;padding:40px 20px}
 footer h3{margin:0 0 10px 0;font-size:1.3rem}
 footer p{margin:0;font-size:0.9rem}
 .qr{padding:16px;border:2px dashed var(--gold);border-radius:12px;text-align:center}
-@media (max-width:768px){
-  nav a{margin:0 8px;font-size:0.85rem}
-  .nav-menu{display:flex;flex-direction:column;gap:0}
-  nav.active .nav-menu{display:flex;flex-direction:column;position:absolute;top:50px;left:0;right:0;background:rgba(23,50,77,.98);padding:20px;z-index:998}
-  nav.active .nav-menu a{margin:10px 0;display:block;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1)}
-  .menu-toggle{display:block}
-}
 @media (max-width:480px){
   h1{font-size:1.8rem}
   h2{font-size:1.4rem}
   section{padding:30px 16px}
   .hero{height:60vh;min-height:350px;margin-top:50px}
   .hero h1{font-size:2rem}
-  nav{padding:10px}
   .card h3{font-size:1.1rem}
   .card p{font-size:0.9rem}
   .timeline .item{font-size:0.9rem;padding:10px 12px}
@@ -74,7 +70,6 @@ footer p{margin:0;font-size:0.9rem}
 <body>
 
 <nav id="navbar">
-<div style="flex:1"></div>
 <div class="nav-menu" id="navMenu">
 <a href="#willkommen">Willkommen</a>
 <a href="#ablauf">Ablauf</a>
@@ -82,7 +77,6 @@ footer p{margin:0;font-size:0.9rem}
 <a href="#uebernachtung">Übernachtung</a>
 <a href="#kontakt">Kontakt</a>
 </div>
-<button class="menu-toggle" id="menuToggle">☰</button>
 </nav>
 
 <header class="hero">
@@ -187,19 +181,6 @@ const d=target-new Date();
 document.getElementById('countdown').innerHTML='Noch <b>'+Math.floor(d/86400000)+'</b> Tage bis zur Hochzeit';
 }
 upd(); setInterval(upd,60000);
-
-// Hamburger Menü
-const menuToggle=document.getElementById('menuToggle');
-const navbar=document.getElementById('navbar');
-const navLinks=document.querySelectorAll('.nav-menu a');
-menuToggle.addEventListener('click',()=>{
-  navbar.classList.toggle('active');
-});
-navLinks.forEach(link=>{
-  link.addEventListener('click',()=>{
-    navbar.classList.remove('active');
-  });
-});
 </script>
 
 </body>
