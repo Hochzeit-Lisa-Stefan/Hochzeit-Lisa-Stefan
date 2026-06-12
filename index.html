@@ -12,33 +12,77 @@
 *{box-sizing:border-box;scroll-behavior:smooth}
 body{margin:0;font-family:Manrope,sans-serif;color:var(--text);line-height:1.8;background:white}
 h1,h2,h3{font-family:"Cormorant Garamond",serif}
-nav{position:fixed;top:0;width:100%;background:rgba(23,50,77,.85);backdrop-filter:blur(12px);z-index:999;padding:14px;text-align:center}
-nav a{color:#fff;text-decoration:none;margin:0 12px}
-.hero{height:100vh;background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.55)),url('/Hochzeit-Lisa-Stefan/IMG_3783.jpeg') center/cover;display:flex;align-items:center;justify-content:center;color:white;text-align:center}
-.hero h1{font-size:5.8rem;margin:0}
-.hero .box{border:1px solid rgba(255,255,255,.3);padding:20px 30px;border-radius:20px;background:rgba(255,255,255,.08)}
-section{padding:100px 24px}
+nav{position:fixed;top:0;width:100%;background:rgba(23,50,77,.95);backdrop-filter:blur(12px);z-index:999;padding:12px 16px;text-align:center;display:flex;justify-content:space-between;align-items:center}
+nav a{color:#fff;text-decoration:none;margin:0 12px;font-size:0.95rem}
+.menu-toggle{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer}
+.nav-menu{display:flex;gap:0}
+.hero{height:80vh;min-height:400px;background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.55)),url('/Hochzeit-Lisa-Stefan/IMG_3783.jpeg') center/cover;display:flex;align-items:center;justify-content:center;color:white;text-align:center;margin-top:50px}
+.hero div{padding:20px}
+.hero p{margin:0 0 10px 0;font-size:1.2rem}
+.hero h1{font-size:clamp(2.5rem, 8vw, 5.8rem);margin:0;line-height:1.2}
+.hero .box{border:1px solid rgba(255,255,255,.3);padding:16px 20px;border-radius:20px;background:rgba(255,255,255,.08);margin-top:15px;font-size:0.95rem}
+section{padding:60px 20px}
+@media (max-width:768px){
+  section{padding:40px 16px}
+}
 .container{max-width:1150px;margin:auto}
 .alt{background:var(--light)}
-h2{text-align:center;font-size:3rem;color:var(--navy)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
-.card{background:white;padding:28px;border-radius:24px;box-shadow:0 10px 35px rgba(0,0,0,.07)}
-.timeline .item{padding:16px;border-left:3px solid var(--blue);margin:14px 0;background:white}
-.btn{display:inline-block;background:var(--navy);color:white;text-decoration:none;padding:12px 18px;border-radius:12px}
-iframe{width:100%;height:280px;border:0;border-radius:16px}
-form input,form select{width:100%;padding:12px;margin:8px 0;border:1px solid #ddd;border-radius:10px}
-footer{background:var(--navy);color:white;text-align:center;padding:60px 20px}
-.qr{padding:20px;border:2px dashed var(--gold);border-radius:16px;text-align:center}
+h2{text-align:center;font-size:clamp(1.8rem, 5vw, 3rem);color:var(--navy);margin:0 0 30px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+@media (max-width:480px){
+  .grid{grid-template-columns:1fr;gap:16px}
+}
+.card{background:white;padding:24px;border-radius:16px;box-shadow:0 5px 20px rgba(0,0,0,.08)}
+@media (max-width:480px){
+  .card{padding:16px;border-radius:12px}
+}
+.card h3{margin:0 0 12px 0;font-size:1.3rem}
+.card p{margin:0;font-size:0.95rem;line-height:1.6}
+.timeline .item{padding:12px 16px;border-left:3px solid var(--blue);margin:12px 0;background:white;border-radius:8px;font-size:0.95rem}
+.btn{display:inline-block;background:var(--navy);color:white;text-decoration:none;padding:10px 16px;border-radius:8px;font-size:0.9rem;margin-top:10px;cursor:pointer;border:none}
+.btn:hover{opacity:0.85}
+iframe{width:100%;height:240px;border:0;border-radius:12px}
+@media (max-width:480px){
+  iframe{height:200px}
+}
+form{display:flex;flex-direction:column;gap:10px}
+form input,form select{width:100%;padding:10px;border:1px solid #ddd;border-radius:8px;font-size:1rem}
+footer{background:var(--navy);color:white;text-align:center;padding:40px 20px}
+footer h3{margin:0 0 10px 0;font-size:1.3rem}
+footer p{margin:0;font-size:0.9rem}
+.qr{padding:16px;border:2px dashed var(--gold);border-radius:12px;text-align:center}
+@media (max-width:768px){
+  nav a{margin:0 8px;font-size:0.85rem}
+  .nav-menu{display:flex;flex-direction:column;gap:0}
+  nav.active .nav-menu{display:flex;flex-direction:column;position:absolute;top:50px;left:0;right:0;background:rgba(23,50,77,.98);padding:20px;z-index:998}
+  nav.active .nav-menu a{margin:10px 0;display:block;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+  .menu-toggle{display:block}
+}
+@media (max-width:480px){
+  h1{font-size:1.8rem}
+  h2{font-size:1.4rem}
+  section{padding:30px 16px}
+  .hero{height:60vh;min-height:350px;margin-top:50px}
+  .hero h1{font-size:2rem}
+  nav{padding:10px}
+  .card h3{font-size:1.1rem}
+  .card p{font-size:0.9rem}
+  .timeline .item{font-size:0.9rem;padding:10px 12px}
+}
 </style>
 </head>
 <body>
 
-<nav>
+<nav id="navbar">
+<div style="flex:1"></div>
+<div class="nav-menu" id="navMenu">
 <a href="#willkommen">Willkommen</a>
 <a href="#ablauf">Ablauf</a>
 <a href="#anfahrt">Anfahrt</a>
 <a href="#uebernachtung">Übernachtung</a>
 <a href="#kontakt">Kontakt</a>
+</div>
+<button class="menu-toggle" id="menuToggle">☰</button>
 </nav>
 
 <header class="hero">
@@ -102,7 +146,7 @@ footer{background:var(--navy);color:white;text-align:center;padding:60px 20px}
 <div class="card"><h3>⛺ Zelt</h3><p>Wiese neben der Hütte</p></div>
 <div class="card"><h3>🚐 Camper</h3><p>Parkplatz Sillberghaus</p></div>
 </div>
-<p>Bitte stimmt eure Übernachtungspräferenz frühzeitig mit uns ab. Stirnlampe für den Abstieg nicht vergessen.</p>
+<p style="font-size:0.95rem;margin-top:20px">Bitte stimmt eure Übernachtungspräferenz frühzeitig mit uns ab. Stirnlampe für den Abstieg nicht vergessen.</p>
 </div>
 </section>
 
@@ -115,7 +159,7 @@ footer{background:var(--navy);color:white;text-align:center;padding:60px 20px}
 <select><option>Übernachtung auf der Hütte</option><option>Zelten</option><option>Camper/Auto</option></select>
 <select><option>Schweinebraten</option><option>Knödeltris</option></select>
 </form>
-<p><em>Dieses Formular dient als Designvorlage und kann später mit echter Übermittlung ergänzt werden.</em></p>
+<p style="font-size:0.85rem;margin-top:15px"><em>Dieses Formular dient als Designvorlage und kann später mit echter Übermittlung ergänzt werden.</em></p>
 </div>
 </div>
 </section>
@@ -124,8 +168,8 @@ footer{background:var(--navy);color:white;text-align:center;padding:60px 20px}
 <div class="container">
 <h2>Kontakt</h2>
 <div class="grid">
-<div class="card"><h3>Stefan</h3><p>0179 7750976<br>stefanpfrang@gmx.de</p></div>
-<div class="card"><h3>Lisa</h3><p>0151 646410125<br>lisa.vitzthum@gmx.net</p></div>
+<div class="card"><h3>Stefan</h3><p>📱 0179 7750976<br>📧 stefanpfrang@gmx.de</p></div>
+<div class="card"><h3>Lisa</h3><p>📱 0151 646410125<br>📧 lisa.vitzthum@gmx.net</p></div>
 <div class="card qr"><h3>QR-Code für Einladung</h3><p>Hier kann später ein QR-Code zur Website eingefügt werden.</p></div>
 </div>
 </div>
@@ -143,6 +187,19 @@ const d=target-new Date();
 document.getElementById('countdown').innerHTML='Noch <b>'+Math.floor(d/86400000)+'</b> Tage bis zur Hochzeit';
 }
 upd(); setInterval(upd,60000);
+
+// Hamburger Menü
+const menuToggle=document.getElementById('menuToggle');
+const navbar=document.getElementById('navbar');
+const navLinks=document.querySelectorAll('.nav-menu a');
+menuToggle.addEventListener('click',()=>{
+  navbar.classList.toggle('active');
+});
+navLinks.forEach(link=>{
+  link.addEventListener('click',()=>{
+    navbar.classList.remove('active');
+  });
+});
 </script>
 
 </body>
