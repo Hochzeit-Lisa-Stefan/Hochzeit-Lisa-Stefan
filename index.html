@@ -216,7 +216,12 @@ footer p{margin:0;font-size:0.9rem}
 <div class="container">
 <h2><i data-lucide="list-checks"></i> Umfragen</h2>
 <div class="card">
-<form action="mailto:stefanpfrang@gmx.de?cc=lisa.vitzthum@gmx.net" method="GET" enctype="text/plain">
+<form action="https://formspree.io/f/mrevodnj" method="POST">
+
+<input type="hidden" name="_subject" value="Neue Umfrage-Antwort Hochzeit Lisa & Stefan">
+
+<h3><i data-lucide="user"></i> Dein Name</h3>
+<input type="text" name="Name" placeholder="Vor- und Nachname" required>
 
 <h3><i data-lucide="utensils"></i> Hauptgang</h3>
 <p>Bitte wähle deinen Hauptgang für das Abendessen:</p>
@@ -254,10 +259,7 @@ footer p{margin:0;font-size:0.9rem}
 <option value="Trifft auf mich nicht zu">Trifft auf mich nicht zu</option>
 </select>
 
-<h3><i data-lucide="user"></i> Dein Name</h3>
-<input type="text" name="Name" placeholder="Vor- und Nachname" required>
-
-<button type="submit" class="btn btn-primary"><i data-lucide="send"></i> Antworten per E-Mail senden</button>
+<button type="submit" class="btn btn-primary"><i data-lucide="send"></i> Antworten senden</button>
 
 </form>
 </div>
