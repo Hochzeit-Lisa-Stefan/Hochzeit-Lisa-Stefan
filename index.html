@@ -216,45 +216,48 @@ footer p{margin:0;font-size:0.9rem}
 <div class="container">
 <h2><i data-lucide="list-checks"></i> Umfragen</h2>
 <div class="card">
-<form>
+<form action="mailto:stefanpfrang@gmx.de?cc=lisa.vitzthum@gmx.net" method="GET" enctype="text/plain">
 
 <h3><i data-lucide="utensils"></i> Hauptgang</h3>
 <p>Bitte wähle deinen Hauptgang für das Abendessen:</p>
-<select name="hauptgang" required>
+<select name="Hauptgang" required>
 <option value="">— Bitte auswählen —</option>
-<option value="schweinebraten">Schweinebraten mit Knödel und Krautsalat</option>
-<option value="knoedeltris">Knödeltris auf Gemüsebett</option>
+<option value="Schweinebraten mit Knödel und Krautsalat">Schweinebraten mit Knödel und Krautsalat</option>
+<option value="Knödeltris auf Gemüsebett">Knödeltris auf Gemüsebett</option>
 </select>
 
 <h3><i data-lucide="bed"></i> Übernachtung</h3>
 <p>Wo möchtest du übernachten?</p>
-<select name="uebernachtung" required>
+<select name="Uebernachtung" required>
 <option value="">— Bitte auswählen —</option>
-<option value="huette">Hütte</option>
-<option value="zelt">Zelt neben der Hütte</option>
-<option value="camper">Camper/Auto auf dem Parkplatz im Tal</option>
+<option value="Huette">Hütte</option>
+<option value="Zelt neben der Huette">Zelt neben der Hütte</option>
+<option value="Camper/Auto auf dem Parkplatz im Tal">Camper/Auto auf dem Parkplatz im Tal</option>
 </select>
 
 <h3><i data-lucide="car"></i> Shuttle</h3>
 <p>Möchtest du den Shuttle hoch und wieder runter nutzen?</p>
-<select name="shuttle" required>
+<select name="Shuttle" required>
 <option value="">— Bitte auswählen —</option>
-<option value="ja">Ja, hoch und runter</option>
-<option value="nur_hoch">Nur hoch</option>
-<option value="nur_runter">Nur runter</option>
-<option value="nein">Nein</option>
+<option value="Ja, hoch und runter">Ja, hoch und runter</option>
+<option value="Nur hoch">Nur hoch</option>
+<option value="Nur runter">Nur runter</option>
+<option value="Nein">Nein</option>
 </select>
 
 <h3><i data-lucide="cake"></i> Frühstück</h3>
 <p>Falls du im Zelt oder Camper übernachtest: Möchtest du am nächsten Morgen auf der Hütte frühstücken?</p>
-<select name="fruehstueck">
+<select name="Fruehstueck">
 <option value="">— Bitte auswählen —</option>
-<option value="ja">Ja, gerne (20 € p.P.)</option>
-<option value="nein">Nein</option>
-<option value="nicht_relevant">Trifft auf mich nicht zu</option>
+<option value="Ja, gerne (20 Euro p.P.)">Ja, gerne (20 € p.P.)</option>
+<option value="Nein">Nein</option>
+<option value="Trifft auf mich nicht zu">Trifft auf mich nicht zu</option>
 </select>
 
-<button type="submit" class="btn btn-primary"><i data-lucide="send"></i> Antworten senden</button>
+<h3><i data-lucide="user"></i> Dein Name</h3>
+<input type="text" name="Name" placeholder="Vor- und Nachname" required>
+
+<button type="submit" class="btn btn-primary"><i data-lucide="send"></i> Antworten per E-Mail senden</button>
 
 </form>
 </div>
