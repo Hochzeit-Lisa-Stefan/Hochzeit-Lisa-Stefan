@@ -328,10 +328,12 @@ nav{flex-wrap:wrap}
 </footer>
 
 <script>
-const target=new Date("2026-07-17T13:00:00");
 function upd(){
-const d=target-new Date();
-document.getElementById('countdown').innerHTML='Noch <b>'+Math.floor(d/86400000)+'</b> Tage bis zur Hochzeit';
+const now=new Date();
+const today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+const wedding=new Date(2026,6,17);
+const diff=Math.round((wedding-today)/86400000);
+document.getElementById('countdown').innerHTML='Noch <b>'+diff+'</b> Tage bis zur Hochzeit';
 }
 upd(); setInterval(upd,60000);
 document.querySelectorAll('.nav-menu a').forEach(function(link){
