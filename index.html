@@ -86,12 +86,13 @@ nav{justify-content:space-between;padding:12px 16px}
 .nav-menu a{padding:10px 0;border-top:1px solid rgba(255,255,255,.15)}
 nav{flex-wrap:wrap}
 }
+.brand-link{color:white;text-decoration:none;font-weight:600;cursor:pointer}
 </style>
 </head>
 <body>
 
 <nav id="navbar">
-<strong style="color:white">Lisa & Stefan</strong>
+<a href="#" class="brand-link" onclick="window.scrollTo({top:0,behavior:'smooth'});document.getElementById('navMenu').classList.remove('open');return false;">Lisa & Stefan</a>
 <button class="nav-toggle" onclick="document.getElementById('navMenu').classList.toggle('open')">
 <i data-lucide="menu"></i>
 </button>
