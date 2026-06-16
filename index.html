@@ -27,6 +27,7 @@ section{scroll-margin-top:70px}
 .hero p{margin:0 0 5px 0;font-size:1.3rem;font-weight:600;letter-spacing:1px;color:#d8c3a5}
 .hero h1{font-size:clamp(2.5rem, 8vw, 5.8rem);margin:0;line-height:1.2}
 .hero .box{position:absolute;bottom:40px;left:40px;border:1px solid rgba(255,255,255,.3);padding:16px 20px;border-radius:20px;background:rgba(255,255,255,.08);font-size:0.95rem;width:auto;max-width:300px}
+header.hero{scroll-margin-top:70px}
 section{padding:60px 20px}
 @media (max-width:768px){
   section{padding:40px 16px}
@@ -92,7 +93,7 @@ nav{flex-wrap:wrap}
 <body>
 
 <nav id="navbar">
-<a href="#" class="brand-link" onclick="window.scrollTo({top:0,behavior:'smooth'});document.getElementById('navMenu').classList.remove('open');return false;">Lisa & Stefan</a>
+<a href="#hero" class="brand-link" onclick="document.getElementById('navMenu').classList.remove('open')">Lisa & Stefan</a>
 <button class="nav-toggle" onclick="document.getElementById('navMenu').classList.toggle('open')">
 <i data-lucide="menu"></i>
 </button>
@@ -110,7 +111,7 @@ nav{flex-wrap:wrap}
 </div>
 </nav>
 
-<header class="hero">
+<header class="hero" id="hero">
 <div>
 <h1>Hochzeit von<br>Lisa & Stefan</h1>
 </div>
